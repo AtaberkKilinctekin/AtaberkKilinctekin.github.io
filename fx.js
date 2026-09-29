@@ -1,4 +1,25 @@
+// The name resolves out of random characters once, on load.
+function scramble(el, ms) {
+  const text = el.textContent;
+  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  el.setAttribute("aria-label", text);
+  const t0 = performance.now();
+  const tick = (t) => {
+    const k = Math.min((t - t0) / ms, 1);
+    const fixed = Math.floor(text.length * k);
+    let out = text.slice(0, fixed);
+    for (let i = fixed; i < text.length; i++) out += text[i] === " " ? " " : chars[(Math.random() * chars.length) | 0];
+    el.textContent = out;
+    if (k < 1) requestAnimationFrame(tick);
+    else el.removeAttribute("aria-label");
+  };
+  requestAnimationFrame(tick);
+}
+
 function initFx() {
+  const name = document.querySelector(".hero h1");
+  if (name) scramble(name, 1400);
+
   document.querySelectorAll(".spot").forEach((el) => {
     el.addEventListener("pointermove", (e) => {
       const r = el.getBoundingClientRect();

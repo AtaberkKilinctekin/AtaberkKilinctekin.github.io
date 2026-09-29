@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ataberkkilinctekin.github.io/sitemap.xml

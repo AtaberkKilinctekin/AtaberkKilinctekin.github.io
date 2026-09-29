@@ -37,11 +37,11 @@ function initNetwork() {
       for (let j = i + 1; j < nodes.length; j++) {
         const d = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
         if (d < maxD) {
-          ctx.strokeStyle = `rgba(232,180,60,${0.25 * (1 - d / maxD)})`;
+          ctx.strokeStyle = `rgba(0,255,65,${0.25 * (1 - d / maxD)})`;
           ctx.beginPath(); ctx.moveTo(nodes[i].x, nodes[i].y); ctx.lineTo(nodes[j].x, nodes[j].y); ctx.stroke();
         }
       }
-      ctx.fillStyle = "rgba(246,217,138,.6)";
+      ctx.fillStyle = "rgba(170,255,190,.6)";
       ctx.beginPath(); ctx.arc(nodes[i].x, nodes[i].y, 2, 0, Math.PI * 2); ctx.fill();
     }
     raf = requestAnimationFrame(frame);

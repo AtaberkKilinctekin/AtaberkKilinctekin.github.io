@@ -36,7 +36,7 @@ function initHero() {
       const y = c.y + pointer.y * 20 * c.depth;
       ctx.beginPath();
       ctx.arc(x, y, c.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(246,217,138,${0.25 + 0.5 * c.depth / 1.2})`;
+      ctx.fillStyle = `rgba(170,255,190,${0.25 + 0.5 * c.depth / 1.2})`;
       ctx.fill();
     }
     raf = requestAnimationFrame(frame);

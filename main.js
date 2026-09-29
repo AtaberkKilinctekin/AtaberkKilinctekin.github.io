@@ -2,8 +2,11 @@
 initI18n();
 
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  initHero();
-  initNetwork();
+  // The code rain replaces the 2D hero particles and network; they stay as the fallback.
+  if (!initRain()) {
+    initHero();
+    initNetwork();
+  }
   initFx();
   // Fires after the deferred GSAP scripts have run, so a slow CDN never delays the language setup.
   document.addEventListener("DOMContentLoaded", initScroll);
