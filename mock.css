@@ -1,0 +1,124 @@
+/* Mockup A, "plates": every section boundary changes surface, and each lighter plate has a lit
+   top edge and casts a shadow onto the next one. */
+:root { --bg: #131a27; --bg-2: #1d2538; }
+.hero, #ai, #background, #contact { background: var(--bg); }
+#mobile, #web, #game {
+  position: relative; z-index: 1;
+  background: linear-gradient(180deg, #1f283c, #1a2133 70%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .07), 0 1px 0 rgb(0 0 0 / .45);
+}
+#mobile::after, #web::after, #game::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 56px; pointer-events: none;
+  background: linear-gradient(rgb(4 7 12 / .5), transparent);
+}
+.tools { max-width: none; }
+
+/* Mockup B, "shop floor": on top of A, every 3D object stands on the same grid floor as the
+   production line, lit in the middle and fading out. */
+.stack::before, .ph::after, .chest .rig::before, .floor {
+  background:
+    linear-gradient(rgb(141 184 255 / .16) 1px, transparent 1px) 0 0 / 40px 40px,
+    linear-gradient(90deg, rgb(141 184 255 / .16) 1px, transparent 1px) 0 0 / 40px 40px,
+    radial-gradient(closest-side, rgb(141 184 255 / .07), transparent);
+  -webkit-mask: radial-gradient(closest-side, #000 35%, transparent);
+  mask: radial-gradient(closest-side, #000 35%, transparent);
+}
+.floor { inset: -140px -120px; border-radius: 0; opacity: 1; }
+.floor::after { display: none; }
+.stack::before { content: ""; position: absolute; inset: -170px -190px; transform: translateZ(-30px); }
+.stack::after { content: ""; position: absolute; inset: 8px -14px -14px 8px; border-radius: 30px; background: rgb(3 6 11 / .55); filter: blur(14px); transform: translateZ(-29px); }
+.ph::after { content: ""; position: absolute; inset: -80px -110px; transform: translateZ(-1px); }
+.chest .rig::before { content: ""; position: absolute; inset: -90px -120px; transform: translateZ(-1px); }
+.chest .rig::after { content: ""; position: absolute; inset: 6px -10px -10px 6px; background: rgb(3 6 11 / .5); filter: blur(10px); }
+.stack::before { -webkit-mask: radial-gradient(closest-side, #000 20%, transparent 78%); mask: radial-gradient(closest-side, #000 20%, transparent 78%); }
+.stack::before { inset: -250px -270px; -webkit-mask: radial-gradient(closest-side at 62% 52%, #000 25%, transparent 80%); mask: radial-gradient(closest-side at 62% 52%, #000 25%, transparent 80%); }
+
+/* Round 2: no employer lines, a stats row and a skills conveyor at the foot of the hero. */
+#mobile .entry, #web .roles, #background, .tools { display: none; }
+#game { background: var(--bg); box-shadow: none; }
+#game::after { display: none; }
+#contact { position: relative; background: linear-gradient(180deg, #1f283c, #1a2133 70%); box-shadow: inset 0 1px 0 rgb(255 255 255 / .07); }
+.hero-grid { padding-bottom: 1rem; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; margin-top: auto; border-top: 1px solid var(--line); }
+.stat { display: flex; flex-direction: column; gap: .35rem; padding: 1.75rem 1.5rem 2rem; border-left: 1px solid var(--line); }
+.stat:first-child { padding-left: 0; border-left: 0; }
+.stat b { font: 800 clamp(2.75rem, 2rem + 2.4vw, 4.25rem)/1 var(--sans); letter-spacing: -.03em; }
+.stat span { font-weight: 500; }
+.stat small { color: var(--muted); font: 500 .8125rem/1 var(--mono); letter-spacing: .04em; }
+.conveyor { position: relative; overflow: hidden; padding: 14px 0; border-block: 1px solid #0c111b; perspective: 900px;
+  background: repeating-linear-gradient(90deg, #232c40 0 18px, #1f2739 18px 36px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .06), inset 0 -8px 12px -8px rgb(0 0 0 / .6); }
+.conveyor .track { display: flex; gap: 22px; width: max-content; animation: belt 60s linear infinite; }
+.conveyor:hover .track { animation-play-state: paused; }
+.conveyor span { flex: none; padding: 9px 14px; border: 1px solid rgb(154 165 188 / .25); border-radius: 6px;
+  background: #2d3852; box-shadow: 0 3px 0 #1b2233, 0 8px 14px -6px rgb(0 0 0 / .6); color: var(--text); font: 500 14px/1 var(--mono); }
+.conveyor span:nth-child(5n+2) { box-shadow: inset 3px 0 0 var(--mint), 0 3px 0 #1b2233, 0 8px 14px -6px rgb(0 0 0 / .6); }
+@keyframes belt { to { transform: translateX(-50%); } }
+@media (max-width: 720px) {
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .stat { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: .25rem .75rem; padding: 1rem 0; border-left: 0; border-top: 1px solid var(--line); }
+  .stat:first-child { border-top: 0; }
+  .stat b { font-size: 2.5rem; }
+}
+.stats { border-top: 0; }
+.stat { border-top: 1px solid var(--line); }
+
+/* Round 4: backgrounds share the foreground's isometric table (rotateX 60, rotateZ -30),
+   so the objects in front stand on a larger surface instead of in a separate 3D space. */
+.area { position: relative; isolation: isolate; }
+.iso-bg { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; perspective: 5200px;
+  -webkit-mask: radial-gradient(60% 70% at var(--mx, 50%) var(--my, 50%), #000 30%, transparent 100%); mask: radial-gradient(60% 70% at var(--mx, 50%) var(--my, 50%), #000 30%, transparent 100%); }
+.iso-plane { position: absolute; left: 50%; top: 50%; width: 2000px; height: 1600px; margin: -800px 0 0 -1000px; transform-style: preserve-3d;
+  transform: translate(var(--bx, 0px), var(--by, 0px)) rotateX(60deg) rotateZ(-30deg); }
+.iso-plane > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.iso-dot { position: absolute; left: 0; top: 0; width: 10px; height: 10px; margin: -5px; border-radius: 50%; background: var(--sky);
+  box-shadow: 0 0 10px rgb(141 184 255 / .8); offset-rotate: 0deg; animation: travel 4s linear infinite; }
+.iso-dot.mint { width: 12px; height: 12px; margin: -6px; background: var(--mint); box-shadow: 0 0 12px rgb(114 224 184 / .8); }
+@keyframes travel { from { offset-distance: 0%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } to { offset-distance: 100%; opacity: 0; } }
+/* Web: the page's DOM in layers, lifted like the hero's app */
+.dom-bg { --mx: 78%; --my: 26%; perspective: 2600px; }
+.dom-stack { position: absolute; left: 72%; top: 22%; width: 600px; height: 860px; margin: -430px 0 0 -300px; transform-style: preserve-3d;
+  transform: scale(.62) rotateX(58deg) rotateZ(-34deg); }
+.dom-box { position: absolute; border: 1px solid rgb(141 184 255 / .35); border-radius: 6px; background: rgb(35 44 64 / .5); transform: translateZ(calc(var(--l) * 44px)); }
+.dom-box.m { border-color: rgb(114 224 184 / .6); background: rgb(114 224 184 / .12); }
+.dom-box.s { border-color: rgb(141 184 255 / .5); background: rgb(141 184 255 / .12); }
+.dom-box span { position: absolute; top: 6px; left: 8px; color: rgb(154 165 188 / .9); font: 500 13px/1 var(--mono); white-space: nowrap; }
+.dom-box.m span { color: var(--mint); }
+/* Game */
+.glint { position: absolute; width: 22px; height: 22px; margin: -11px; background: radial-gradient(closest-side, #fff, rgb(255 214 130 / .6) 40%, transparent); opacity: 0; animation: glint 4.8s ease-in-out infinite; }
+@keyframes glint { 0%, 70%, 100% { opacity: 0; transform: scale(.4); } 80% { opacity: 1; transform: scale(1.2); } }
+#game .iso-bg { --mx: 72%; }
+/* Contact: parcels ride the belt out of the page */
+.ship-bg { --mx: 74%; --my: 70%; }
+.ship-bg .iso-plane { --bx: 18vw; --by: 180px; }
+.ship { position: absolute; left: 0; top: 778px; transform-style: preserve-3d; animation: ship 19.2s linear infinite; }
+@keyframes ship { from { transform: translateX(-60px); } to { transform: translateX(2000px); } }
+#mobile .iso-bg { --my: 40%; }
+#ai .iso-bg { --my: 48%; }
+.dom-bg { -webkit-mask: none; mask: none; }
+.dom-stack { left: 74%; top: 170px; margin: -430px 0 0 -300px; transform: scale(.46) rotateX(60deg) rotateZ(-30deg); }
+.dom-box { transform: translateZ(calc(var(--l) * 90px)); box-shadow: 0 0 0 1px rgb(12 17 27 / .4); }
+.dom-box span { font-size: 22px; top: 10px; left: 12px; }
+.web-floor { --my: 60%; }
+#mobile .iso-bg { -webkit-mask: radial-gradient(62% 48% at 50% 36%, #000 35%, transparent 100%); mask: radial-gradient(62% 48% at 50% 36%, #000 35%, transparent 100%); }
+#ai .iso-bg { -webkit-mask: radial-gradient(62% 46% at 50% 46%, #000 35%, transparent 100%); mask: radial-gradient(62% 46% at 50% 46%, #000 35%, transparent 100%); }
+.dom-stack { left: 72%; top: 210px; transform: scale3d(.44, .44, .44) rotateX(60deg) rotateZ(-30deg); }
+.dom-box { transform: translateZ(calc(var(--l) * 110px)); }
+#mobile .iso-bg { -webkit-mask: radial-gradient(64% 40% at 50% 33%, #000 40%, transparent 100%); mask: radial-gradient(64% 40% at 50% 33%, #000 40%, transparent 100%); }
+/* Solid layers in the hero's style instead of faint wireframes */
+.dom-stack { top: 190px; transform: scale3d(.4, .4, .4) rotateX(58deg) rotateZ(-34deg); }
+.dom-box { border: 2px solid #36425c; border-radius: 16px; background: #1a2030; box-shadow: none; }
+.dom-box[style*="--l:1"] { background: #1f2739; }
+.dom-box[style*="--l:2"] { background: #232c40; }
+.dom-box[style*="--l:3"], .dom-box[style*="--l:4"] { background: #2a3449; }
+.dom-box.m { background: #2c5a4d; border-color: #72e0b8; }
+.dom-box.s { background: #34507c; border-color: #8db8ff; }
+.dom-box span { font-size: 26px; color: #9aa5bc; }
+.dom-stack { top: 205px; transform: scale3d(.34, .34, .34) rotateX(58deg) rotateZ(-34deg); }
+/* E1: touch ripples spreading from under each phone, on the phone's own plane */
+#mobile .iso-bg { display: none; }
+.ripple { position: absolute; left: 50%; top: 50%; width: 220px; height: 220px; margin: -110px; border: 2px solid rgb(141 184 255 / .5); border-radius: 50%;
+  transform: translateZ(-2px) scale(.6); opacity: 0; animation: ripple 4.2s cubic-bezier(.2, .6, .3, 1) infinite; }
+.app:nth-child(2) .ripple { border-color: rgb(114 224 184 / .5); }
+@keyframes ripple { 0% { transform: translateZ(-2px) scale(.55); opacity: 0; } 15% { opacity: 1; } 100% { transform: translateZ(-2px) scale(2.1); opacity: 0; } }
+.ph::after { inset: -120px -150px; }

@@ -6,7 +6,8 @@
   <title>Ataberk Kılınçtekin · Mobile & Frontend Engineer</title>
   <meta name="description" content="Ataberk Kılınçtekin, mobile and frontend engineer in Istanbul. iPhone and iPad apps in SwiftUI and UIKit, web apps in React, built spec-first with AI agents.">
   <link rel="canonical" href="https://ataberkkilinctekin.github.io/">
-  <meta name="theme-color" content="#010604">
+  <meta name="theme-color" content="#161C29">
+  <meta name="color-scheme" content="dark">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://ataberkkilinctekin.github.io/">
   <meta property="og:site_name" content="Ataberk Kılınçtekin">
@@ -42,234 +43,352 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mock.css">
 </head>
 <body>
-  <canvas id="rain" aria-hidden="true"></canvas>
-  <nav class="nav" aria-label="Main">
-    <a class="brand" href="#hero" aria-label="Ataberk Kılınçtekin">AK</a>
-    <div class="nav-links">
-      <a href="#ai" data-i18n="nav.ai">AI</a>
-      <a href="#journey" data-i18n="nav.journey">Experience</a>
-      <a href="#work" data-i18n="nav.work">Projects</a>
-      <a href="#game" data-i18n="nav.game">Game</a>
-      <a href="#contact" data-i18n="nav.contact">Contact</a>
-    </div>
-    <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Türkçe (TR)">TR</button>
-  </nav>
-
   <header id="hero" class="hero">
-    <div class="cave" aria-hidden="true">
-      <svg class="cave-back" viewBox="0 0 1000 220" preserveAspectRatio="none"><path d="M0 0H1000V60L940 60L910 180L880 70L820 70L790 140L760 60L680 60L650 200L620 60L540 60L510 120L480 60L380 60L350 170L320 60L240 60L210 130L180 60L100 60L70 150L40 60L0 60Z"/></svg>
-      <svg class="cave-front" viewBox="0 0 1000 200" preserveAspectRatio="none"><path d="M0 200V120L80 90L160 130L260 70L360 120L470 80L580 125L690 60L800 115L900 85L1000 120V200Z"/></svg>
-    </div>
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <nav class="nav" aria-label="Sections">
+      <div class="nav-links">
+        <a href="#mobile" data-i18n="nav.mobile">Mobile</a>
+        <a href="#ai" data-i18n="nav.ai">AI</a>
+        <a href="#web" data-i18n="nav.web">Web</a>
+        <a href="#game" data-i18n="nav.game">Game</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </div>
+      <button id="lang-toggle" type="button" aria-label="Türkçe (TR)" hidden>TR</button>
+    </nav>
 
-    <div class="wrap hero-grid">
+    <div class="hero-grid">
       <div class="hero-text">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Mobile &amp; Frontend Engineer · Istanbul</p>
-        <h1 data-i18n="hero.title">Ataberk Kılınçtekin</h1>
-        <p class="tagline"><span data-i18n="hero.tag1">I build apps for iPhone, iPad</span> <em data-i18n="hero.tag2">and the web.</em></p>
-        <p class="sub" data-i18n="hero.sub">I'm at kloia, working in SwiftUI, UIKit and React. Apps I've worked on include Cepte Şok, Boost AI and UNHCR Service Advisor. I work spec-first with Claude Code and review every change before it ships.</p>
-        <div class="cta">
-          <a class="btn btn-gold" href="#work" data-i18n="hero.cta1">Projects</a>
-          <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Email me</a>
+        <h1 class="name" lang="tr"><span>Ataberk</span> <span>Kılınçtekin</span></h1>
+        <p class="role" data-i18n="hero.role">Mobile &amp; frontend engineer, Istanbul</p>
+        <p class="sub" data-i18n="hero.sub">I build apps for iPhone, iPad and the web.</p>
+        <p class="cta"><a class="btn" href="mailto:i.ataberk.kilinctekin@gmail.com" data-i18n="hero.cta2">Email me</a><a class="more" href="#mobile" data-i18n="hero.cta1">Projects</a></p>
+      </div>
+
+      <div class="explode" aria-hidden="true">
+        <div class="stack">
+          <div class="layer l-data" style="--i:0">
+<pre>{
+  "id": 4821,
+  "items": [
+    { "sku": "A-102", "qty": 2 },
+    { "sku": "C-310", "qty": 1 }
+  ],
+  "status": "shipped",
+  "eta": "2026-10-02"
+}</pre>
+            <i class="pin"></i>
+          </div>
+          <div class="layer l-net" style="--i:1">
+            <div class="req"><b>GET</b>/orders<i>200</i></div>
+            <div class="req"><b>GET</b>/orders/4821<i>200</i></div>
+            <div class="req"><b>POST</b>/cart/items<i>201</i></div>
+            <div class="req"><b>GET</b>/img/a-102<i>304</i></div>
+            <div class="req"><b>PUT</b>/profile<i>200</i></div>
+            <i class="pin"></i>
+          </div>
+          <div class="layer l-code" style="--i:2">
+<pre><span class="k">struct</span> <span class="ty">OrderList</span>: <span class="ty">View</span> {
+  <span class="k">@State</span> <span class="k">var</span> model =
+    <span class="ty">OrdersModel</span>()
+
+  <span class="k">var</span> body: <span class="k">some</span> <span class="ty">View</span> {
+    <span class="ty">List</span>(model.orders) {
+      <span class="ty">OrderRow</span>(order: $0)
+    }
+    .refreshable {
+      <span class="k">await</span> model.load()
+    }
+  }
+}<span class="caret"></span></pre>
+            <i class="pin"></i>
+          </div>
+          <div class="layer l-views" style="--i:3">
+            <div class="vbox" data-n="NavigationStack">
+              <div class="vbox" data-n="List">
+                <div class="vbox row" data-n="OrderRow"></div>
+                <div class="vbox row" data-n="OrderRow"></div>
+                <div class="vbox row" data-n="OrderRow"></div>
+                <div class="vbox row" data-n="OrderRow"></div>
+              </div>
+            </div>
+            <div class="vbox bar" data-n="TabView"></div>
+            <i class="pin"></i>
+          </div>
+          <div class="layer l-screen" style="--i:4">
+            <div class="ui">
+              <div class="ui-top"><span>9:41</span><span class="isl"></span><span>●●</span></div>
+              <div class="ui-h">Orders</div>
+              <div class="ui-search"></div>
+              <div class="ui-card"><i></i><div><b></b><s></s></div></div>
+              <div class="ui-card"><i></i><div><b></b><s></s></div></div>
+              <div class="ui-card"><i></i><div><b></b><s></s></div></div>
+              <div class="ui-card"><i></i><div><b></b><s></s></div></div>
+              <div class="ui-tab"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <i class="pin"></i>
+          </div>
         </div>
-      </div>
-
-      <div class="orbit" aria-hidden="true">
-        <div class="ring r3"><div class="node" style="--a:30deg"><i><b>TypeScript</b></i></div><div class="node" style="--a:150deg"><i><b>Spec-driven</b></i></div><div class="node" style="--a:270deg"><i><b>Tailwind</b></i></div></div>
-        <div class="ring r2"><div class="node" style="--a:60deg"><i><b>SwiftUI</b></i></div><div class="node" style="--a:190deg"><i><b>React</b></i></div><div class="node" style="--a:310deg"><i><b>UIKit</b></i></div></div>
-        <div class="ring r1"><div class="node" style="--a:0deg"><i><b>Claude Code</b></i></div><div class="node" style="--a:180deg"><i><b>Agents</b></i></div></div>
-        <div class="core"><span>AK</span></div>
+        <svg class="leaders"><path class="lines"/><path class="dots"/></svg>
+        <div class="lab"><em>5</em><span data-i18n="x.data">Data</span><small>Codable</small></div>
+        <div class="lab"><em>4</em><span data-i18n="x.net">Network</span><small>async/await</small></div>
+        <div class="lab"><em>3</em><span data-i18n="x.code">Swift</span></div>
+        <div class="lab"><em>2</em><span>SwiftUI</span><small data-i18n="x.tree">view tree</small></div>
+        <div class="lab"><em>1</em><span data-i18n="x.screen">Screen</span></div>
       </div>
     </div>
-
     <div class="wrap stats">
-      <div class="stat"><b data-count="4" data-suffix="+">4+</b><span data-i18n="stat.years">years in software</span></div>
-      <div class="stat"><b data-count="4">4</b><span data-i18n="stat.products">live products</span></div>
-      <div class="stat"><b data-count="3">3</b><span data-i18n="stat.platforms">platforms</span><small>iOS · iPad · Web</small></div>
+      <div class="stat"><b>4+</b><span>yıl yazılım deneyimi</span></div>
+      <div class="stat"><b>7</b><span>yayında proje</span></div>
+      <div class="stat"><b>3</b><span>platform</span><small>iOS · iPad · Web</small></div>
     </div>
-
-    <div class="marquee" aria-hidden="true">
-      <div class="track">
-        <span>SwiftUI</span><span>UIKit</span><span>React</span><span>TypeScript</span><span>Claude Code</span><span>Agentic coding</span><span>Spec-driven development</span><span>Multi-agent systems</span><span>Automation</span><span>Flutter</span><span>Kotlin</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>Node.js</span><span>.NET Core</span>
-        <span>SwiftUI</span><span>UIKit</span><span>React</span><span>TypeScript</span><span>Claude Code</span><span>Agentic coding</span><span>Spec-driven development</span><span>Multi-agent systems</span><span>Automation</span><span>Flutter</span><span>Kotlin</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>Node.js</span><span>.NET Core</span>
-      </div>
-    </div>
+    <div class="conveyor" aria-hidden="true"><div class="track"><span>SwiftUI</span><span>UIKit</span><span>React</span><span>TypeScript</span><span>Claude Code</span><span>Agentic coding</span><span>Spec-driven development</span><span>Multi-agent systems</span><span>Automation</span><span>Flutter</span><span>Kotlin</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>Node.js</span><span>.NET Core</span><span>SwiftUI</span><span>UIKit</span><span>React</span><span>TypeScript</span><span>Claude Code</span><span>Agentic coding</span><span>Spec-driven development</span><span>Multi-agent systems</span><span>Automation</span><span>Flutter</span><span>Kotlin</span><span>Redux Toolkit</span><span>Tailwind CSS</span><span>Node.js</span><span>.NET Core</span></div></div>
   </header>
 
   <main>
-    <section id="ai" class="section ai">
-      <canvas id="net-canvas" aria-hidden="true"></canvas>
+    <section id="mobile" class="area">
+      <div class="iso-bg" aria-hidden="true" style="--bx:0px;--by:-40px"><div class="iso-plane"><svg viewBox="0 0 2000 1600"><defs><pattern id="g1" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#36425C" stroke-opacity=".55"/></pattern></defs><rect width="2000" height="1600" fill="url(#g1)"/><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8DB8FF" fill-opacity=".6"/></marker></defs><path d="M370 450H520" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M640 450H790" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M910 450H1060" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M1180 450H1330" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M1450 450H1600" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M580 570V900" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M1120 570V900" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M640 1020H790" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M910 1020H1060" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><path d="M1180 1020H1330" fill="none" stroke="#8DB8FF" stroke-opacity=".45" stroke-dasharray="6 7" marker-end="url(#ar)"/><g transform="translate(250 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="40" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="52" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="82" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="88" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="100" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="130" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="136" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="148" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="178" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="184" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="196" width="38" height="5" rx="2.5" fill="#36425C"/></g><g transform="translate(520 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="96" height="80" rx="10" fill="#8DB8FF" fill-opacity=".22"/><rect x="12" y="126" width="80" height="7" rx="3.5" fill="#4A5877"/><rect x="12" y="142" width="56" height="6" rx="3" fill="#36425C"/><rect x="12" y="200" width="96" height="24" rx="12" fill="#8DB8FF" fill-opacity=".35"/></g><g transform="translate(790 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="34" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="12" y="96" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="62" y="96" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="12" y="158" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="158" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/></g><g transform="translate(1060 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="40" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="52" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="82" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="88" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="100" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="130" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="136" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="148" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="178" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="184" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="196" width="38" height="5" rx="2.5" fill="#36425C"/></g><g transform="translate(1330 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="96" height="80" rx="10" fill="#8DB8FF" fill-opacity=".22"/><rect x="12" y="126" width="80" height="7" rx="3.5" fill="#4A5877"/><rect x="12" y="142" width="56" height="6" rx="3" fill="#36425C"/><rect x="12" y="200" width="96" height="24" rx="12" fill="#8DB8FF" fill-opacity=".35"/></g><g transform="translate(1600 330)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="34" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="12" y="96" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="62" y="96" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="12" y="158" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="158" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/></g><g transform="translate(520 900)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="40" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="52" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="82" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="88" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="100" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="130" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="136" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="148" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="178" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="184" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="196" width="38" height="5" rx="2.5" fill="#36425C"/></g><g transform="translate(790 900)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="96" height="80" rx="10" fill="#8DB8FF" fill-opacity=".22"/><rect x="12" y="126" width="80" height="7" rx="3.5" fill="#4A5877"/><rect x="12" y="142" width="56" height="6" rx="3" fill="#36425C"/><rect x="12" y="200" width="96" height="24" rx="12" fill="#8DB8FF" fill-opacity=".35"/></g><g transform="translate(1060 900)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="34" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="12" y="96" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/><rect x="62" y="96" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="12" y="158" width="46" height="54" rx="8" fill="#8DB8FF" fill-opacity=".2"/><rect x="62" y="158" width="46" height="54" rx="8" fill="#FFB547" fill-opacity=".2"/></g><g transform="translate(1330 900)"><rect width="120" height="240" rx="18" fill="#232C40" stroke="#3B4866"/><rect x="42" y="10" width="36" height="8" rx="4" fill="#36425C"/><rect x="12" y="34" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="40" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="52" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="82" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="88" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="100" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="130" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="136" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="148" width="38" height="5" rx="2.5" fill="#36425C"/><rect x="12" y="178" width="26" height="26" rx="6" fill="#72E0B8" fill-opacity=".35"/><rect x="46" y="184" width="60" height="6" rx="3" fill="#4A5877"/><rect x="46" y="196" width="38" height="5" rx="2.5" fill="#36425C"/></g></svg><i class="iso-dot" style="offset-path:path('M370 450H520');animation-delay:-0.0s"></i><i class="iso-dot" style="offset-path:path('M640 450H790');animation-delay:-1.3s"></i><i class="iso-dot" style="offset-path:path('M910 450H1060');animation-delay:-2.6s"></i><i class="iso-dot" style="offset-path:path('M1180 450H1330');animation-delay:-3.9s"></i><i class="iso-dot" style="offset-path:path('M1450 450H1600');animation-delay:-5.2s"></i><i class="iso-dot" style="offset-path:path('M580 570V900');animation-delay:-6.5s"></i><i class="iso-dot" style="offset-path:path('M1120 570V900');animation-delay:-7.8s"></i><i class="iso-dot" style="offset-path:path('M640 1020H790');animation-delay:-9.1s"></i><i class="iso-dot" style="offset-path:path('M910 1020H1060');animation-delay:-10.4s"></i><i class="iso-dot" style="offset-path:path('M1180 1020H1330');animation-delay:-11.7s"></i></div></div>
       <div class="wrap">
-        <p class="eyebrow" data-reveal data-i18n="ai.eyebrow">01 · AI</p>
-        <h2 data-reveal><span data-i18n="ai.h1">How I work</span> <em data-i18n="ai.h2">with AI.</em></h2>
-        <p class="lead" data-reveal data-i18n="ai.lead">Most of my code is written by AI agents in Claude Code, from a spec I write and approve first. I review every change before it goes in.</p>
+        <div class="area-head">
+          <h2 data-i18n="mobile.h">Mobile</h2>
+          <div class="entry">
+            <h3 data-i18n="mobile.role">Frontend &amp; Mobile Engineer, kloia</h3>
+            <p class="when" data-i18n="mobile.when">2023–now</p>
+          </div>
+        </div>
 
-        <ol class="flow" role="list" data-reveal>
-          <li><span class="flow-n">01</span><b data-i18n="ai.f1.t">Spec</b><small data-i18n="ai.f1.b">Written and approved before any code</small></li>
-          <li><span class="flow-n">02</span><b data-i18n="ai.f2.t">Plan</b><small data-i18n="ai.f2.b">Split into small, testable tasks</small></li>
-          <li><span class="flow-n">03</span><b data-i18n="ai.f3.t">Build</b><small data-i18n="ai.f3.b">Agents write the code, tests confirm it</small></li>
-          <li><span class="flow-n">04</span><b data-i18n="ai.f4.t">Review</b><small data-i18n="ai.f4.b">A separate agent checks the diff, then me</small></li>
+        <ul class="apps">
+          <li class="app">
+            <div class="phone3d" aria-hidden="true">
+              <div class="ph">
+                <i class="ripple"></i><i class="ripple" style="animation-delay:-1.4s"></i><i class="ripple" style="animation-delay:-2.8s"></i><i class="pl pl-back"></i>
+                <i class="pl pl-views"></i>
+                <div class="pl pl-screen shop">
+                  <b class="bar"></b><b class="search"></b>
+                  <span class="grid"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                  <b class="cart"></b>
+                </div>
+              </div>
+            </div>
+            <h3 lang="tr">Cepte Şok</h3>
+            <p class="tag" data-i18n="work.cepte.tag">Retail</p>
+            <p data-i18n="work.cepte.b">Şok Marketler's online shopping app for iPhone.</p>
+            <a class="store" href="https://apps.apple.com/tr/app/cepte-şok/id1234494259" rel="noopener" data-i18n="work.store">App Store</a>
+          </li>
+          <li class="app">
+            <div class="phone3d" aria-hidden="true">
+              <div class="ph">
+                <i class="ripple"></i><i class="ripple" style="animation-delay:-1.4s"></i><i class="ripple" style="animation-delay:-2.8s"></i><i class="pl pl-back"></i>
+                <i class="pl pl-views"></i>
+                <div class="pl pl-screen math">
+                  <b class="bar"></b>
+                  <span class="q">∫ x² dx</span>
+                  <span class="step"><em>1</em><i></i></span>
+                  <span class="step"><em>2</em><i></i></span>
+                  <span class="step"><em>3</em><i></i></span>
+                  <span class="ans">x³⁄3 + C</span>
+                </div>
+              </div>
+            </div>
+            <h3>Boost AI</h3>
+            <p class="tag" data-i18n="work.boost.tag">Education, AI</p>
+            <p data-i18n="work.boost.b">Math help for exam prep. A student uploads a question and gets the solution step by step.</p>
+            <a class="store" href="https://apps.apple.com/tr/app/boost-ai/id6737204140" rel="noopener" data-i18n="work.store">App Store</a>
+          </li>
+          <li class="app">
+            <div class="phone3d" aria-hidden="true">
+              <div class="ph">
+                <i class="ripple"></i><i class="ripple" style="animation-delay:-1.4s"></i><i class="ripple" style="animation-delay:-2.8s"></i><i class="pl pl-back"></i>
+                <i class="pl pl-views"></i>
+                <div class="pl pl-screen chat">
+                  <b class="bar"></b>
+                  <span class="row"><i></i><b></b></span>
+                  <span class="row"><i></i><b></b></span>
+                  <span class="bubble in"></span>
+                  <span class="bubble out"></span>
+                  <span class="bubble in short"></span>
+                </div>
+              </div>
+            </div>
+            <h3>UNHCR Service Advisor</h3>
+            <p class="tag" data-i18n="work.unhcr.tag">Humanitarian</p>
+            <p data-i18n="work.unhcr.b">UNHCR's app for refugees and asylum-seekers in Turkey: rights, service locations and a chatbot.</p>
+            <a class="store" href="https://apps.apple.com/tr/app/unhcr-service-advisor/id6448704153" rel="noopener" data-i18n="work.store">App Store</a>
+          </li>
+        </ul>
+
+        <p class="tools"><span data-i18n="tools.label">Tools</span> SwiftUI, UIKit, Flutter, Kotlin</p>
+      </div>
+    </section>
+
+    <section id="ai" class="area band">
+      <div class="iso-bg" aria-hidden="true" style="--bx:0px;--by:60px"><div class="iso-plane"><svg viewBox="0 0 2000 1600"><defs><pattern id="g2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#36425C" stroke-opacity=".55"/></pattern></defs><rect width="2000" height="1600" fill="url(#g2)"/><path d="M60 420H520V700H640" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M1940 380H1500V640H1360" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M280 1340V1000H640V900" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M1720 1360V1060H1360V960" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M1000 40V520" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M1000 1560V1100" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M60 1100H400V860H640" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><path d="M1940 900H1600V760H1360" fill="none" stroke="#72E0B8" stroke-opacity=".28" stroke-width="3"/><rect x="48" y="408" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="55" y="415" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="508" y="688" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="515" y="695" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1928" y="368" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="1935" y="375" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="268" y="1328" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="275" y="1335" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="628" y="988" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="635" y="995" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1708" y="1348" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="1715" y="1355" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1348" y="1048" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="1355" y="1055" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="988" y="28" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="995" y="35" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="988" y="1548" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="995" y="1555" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="48" y="1088" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="55" y="1095" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="388" y="848" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="395" y="855" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1928" y="888" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="1935" y="895" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1588" y="748" width="24" height="24" rx="5" fill="#232C40" stroke="#72E0B8" stroke-opacity=".6"/><rect x="1595" y="755" width="10" height="10" rx="2" fill="#72E0B8" fill-opacity=".6"/><rect x="1484" y="624" width="32" height="32" rx="6" fill="#3A2F1F" stroke="#FFB547"/><rect x="1492" y="632" width="16" height="16" rx="3" fill="#FFB547"/></svg><i class="iso-dot mint" style="offset-path:path('M60 420H520V700H640');animation-duration:7s;animation-delay:-0.0s"></i><i class="iso-dot mint" style="offset-path:path('M1940 380H1500V640H1360');animation-duration:8s;animation-delay:-1.7s"></i><i class="iso-dot mint" style="offset-path:path('M280 1340V1000H640V900');animation-duration:9s;animation-delay:-3.4s"></i><i class="iso-dot mint" style="offset-path:path('M1720 1360V1060H1360V960');animation-duration:7s;animation-delay:-5.1s"></i><i class="iso-dot mint" style="offset-path:path('M1000 40V520');animation-duration:8s;animation-delay:-6.8s"></i><i class="iso-dot mint" style="offset-path:path('M1000 1560V1100');animation-duration:9s;animation-delay:-8.5s"></i><i class="iso-dot mint" style="offset-path:path('M60 1100H400V860H640');animation-duration:7s;animation-delay:-10.2s"></i><i class="iso-dot mint" style="offset-path:path('M1940 900H1600V760H1360');animation-duration:8s;animation-delay:-11.9s"></i></div></div>
+      <div class="wrap">
+        <div class="area-head">
+          <h2 data-i18n="ai.h">AI</h2>
+          <p class="lead" data-i18n="ai.lead">Most of my code is written by AI agents in Claude Code.</p>
+        </div>
+
+        <div class="line" aria-hidden="true">
+          <div class="plant">
+            <div class="floor"></div>
+            <div class="bx belt" style="--x:0;--y:110;--w:660;--d:62;--h:14"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+            <div class="bx parcel" style="--x:10;--y:127;--w:28;--d:28;--h:20"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+            <div class="bx parcel" style="--x:10;--y:127;--w:28;--d:28;--h:20"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+            <div class="bx parcel" style="--x:10;--y:127;--w:28;--d:28;--h:20"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+            <div class="bx parcel" style="--x:10;--y:127;--w:28;--d:28;--h:20"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+            <div class="bx parcel" style="--x:10;--y:127;--w:28;--d:28;--h:20"><i class="t"></i><i class="f"></i><i class="s"></i></div>
+
+            <div class="bx station" style="--x:20;--y:10;--w:96;--d:70;--h:52">
+              <i class="t"></i><i class="f"><span class="scr"><b># Orders list</b><b>- see orders</b><b>- pull to refresh</b><b>- offline cache</b></span></i><i class="s"></i>
+              <div class="lbl"><span data-i18n="line.spec">Spec</span></div>
+            </div>
+            <div class="bx station" style="--x:150;--y:10;--w:96;--d:70;--h:52">
+              <i class="t"></i><i class="f"><span class="scr"><b>[x] 1 model</b><b>[x] 2 api</b><b>[ ] 3 list view</b><b>[ ] 4 tests</b></span></i><i class="s"></i>
+              <div class="lbl"><span data-i18n="line.plan">Plan</span></div>
+            </div>
+            <div class="bx station build" style="--x:285;--y:0;--w:130;--d:80;--h:112;--lift:50">
+              <i class="t"></i><i class="f"><span class="scr"><b>struct OrderList: View {</b><b>  var body: some View {</b><b>    List(model.orders) {</b><b>      OrderRow(order: $0)</b><b>    }</b><b>✓ 12 tests pass</b></span></i><i class="s"></i>
+              <div class="lbl"><span data-i18n="line.build">Build</span></div>
+            </div>
+            <div class="bx station review" style="--x:450;--y:14;--w:86;--d:66;--h:74;--lift:96">
+              <i class="t"></i><i class="f"><span class="scr"><b>diff +84 −12</b><b>checks ✓</b><b>approve?</b></span></i><i class="s"></i><i class="lamp"></i>
+              <div class="lbl"><span data-i18n="line.review">Review</span></div>
+            </div>
+            <div class="bx station" style="--x:570;--y:16;--w:78;--d:62;--h:26;--lift:30">
+              <i class="t"></i><i class="f"></i><i class="s"></i>
+              <i class="tile" style="left:8px;top:6px;background:var(--amber)"></i><i class="tile" style="left:42px;top:6px;background:var(--sky)"></i>
+              <i class="tile" style="left:8px;top:30px;background:var(--mint)"></i><i class="tile" style="left:42px;top:30px;background:var(--text)"></i>
+              <div class="lbl"><span data-i18n="line.ship">Ship</span></div>
+            </div>
+          </div>
+        </div>
+        <ol class="steps">
+          <li data-i18n="line.spec">Spec</li>
+          <li data-i18n="line.plan">Plan</li>
+          <li data-i18n="line.build">Build</li>
+          <li data-i18n="line.review">Review</li>
+          <li data-i18n="line.ship">Ship</li>
         </ol>
 
-        <div class="bento">
-          <div class="card big spot" data-reveal>
-            <div class="viz viz-code" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-            <span class="num">01</span>
-            <h3 data-i18n="ai.c1.t">Agentic coding with Claude Code</h3>
-            <p data-i18n="ai.c1.b">Claude Code drafts screens, tests and refactors. I correct what's wrong and keep the architecture consistent.</p>
-          </div>
-          <div class="card spot" data-reveal>
-            <div class="viz viz-spec" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-            <span class="num">02</span>
-            <h3 data-i18n="ai.c2.t">Spec first, then code</h3>
-            <p data-i18n="ai.c2.b">Every feature starts with a written spec and a task plan. Code comes after both are approved.</p>
-          </div>
-          <div class="card spot" data-reveal>
-            <div class="viz viz-models" aria-hidden="true"><span style="--w:92%">Haiku</span><span style="--w:60%">Sonnet</span><span style="--w:28%">Opus</span></div>
-            <span class="num">03</span>
-            <h3 data-i18n="ai.c3.t">Token-efficient by design</h3>
-            <p data-i18n="ai.c3.b">Small models search and read; larger ones plan and review. Exploration runs in sub-agents, so the main session stays small and burns fewer tokens.</p>
-          </div>
-          <div class="card spot" data-reveal>
-            <div class="viz viz-brain" aria-hidden="true"><i></i><i></i><i></i></div>
-            <span class="num">04</span>
-            <h3 data-i18n="ai.c4.t">Project memory</h3>
-            <p data-i18n="ai.c4.b">Decisions, pitfalls and setup notes live in a knowledge base the agents read before they start.</p>
-          </div>
-          <blockquote class="quote" data-reveal data-i18n="ai.quote">I'm responsible for every line that ships, whoever typed it.</blockquote>
-        </div>
-        <div class="interests">
-          <div class="card spot" data-reveal>
-            <svg class="viz viz-net" viewBox="0 0 160 90" aria-hidden="true"><path d="M14 18L80 12M14 18L80 34M14 18L80 56M14 18L80 78M14 45L80 12M14 45L80 34M14 45L80 56M14 45L80 78M14 72L80 12M14 72L80 34M14 72L80 56M14 72L80 78M80 12L146 30M80 12L146 60M80 34L146 30M80 34L146 60M80 56L146 30M80 56L146 60M80 78L146 30M80 78L146 60"/><circle class="l0" cx="14" cy="18" r="4.5"/><circle class="l0" cx="14" cy="45" r="4.5"/><circle class="l0" cx="14" cy="72" r="4.5"/><circle class="l1" cx="80" cy="12" r="4.5"/><circle class="l1" cx="80" cy="34" r="4.5"/><circle class="l1" cx="80" cy="56" r="4.5"/><circle class="l1" cx="80" cy="78" r="4.5"/><circle class="l2" cx="146" cy="30" r="4.5"/><circle class="l2" cx="146" cy="60" r="4.5"/></svg>
-            <span class="num" data-i18n="ai.i1.k">Studying</span>
-            <h3 data-i18n="ai.i1.t">AI architectures</h3>
-            <p data-i18n="ai.i1.b">I study how LLMs and multi-agent systems are built: transformers, agent design and running ML systems in production.</p>
-          </div>
-          <div class="card spot" data-reveal>
-            <div class="viz viz-belt" aria-hidden="true"><i></i><i></i><i></i><b>✓</b></div>
-            <span class="num" data-i18n="ai.i2.k">Open to</span>
-            <h3 data-i18n="ai.i2.t">Automation projects</h3>
-            <p data-i18n="ai.i2.b">AI agents that take over repetitive work, workflow automation and UI test automation.</p>
-          </div>
-        </div>
+        <dl class="notes">
+          <div><dt data-i18n="ai.tokens.t">Token-efficient by design</dt><dd data-i18n="ai.tokens.b">Small models search and read; larger ones plan and review. Exploration runs in sub-agents, so the main session stays small.</dd></div>
+          <div><dt data-i18n="ai.memory.t">Project memory</dt><dd data-i18n="ai.memory.b">Decisions, pitfalls and setup notes live in a knowledge base the agents read before they start.</dd></div>
+          <div><dt data-i18n="ai.auto.t">Automation</dt><dd data-i18n="ai.auto.b">Agents that take over repetitive work, plus workflow and UI test automation.</dd></div>
+          <div><dt data-i18n="ai.study.t">Studying AI architectures</dt><dd data-i18n="ai.study.b">How LLMs and multi-agent systems are built: transformers, agent design and running ML systems in production.</dd></div>
+        </dl>
       </div>
     </section>
 
-    <section id="journey" class="section journey">
-      <div class="wrap split">
-        <div class="split-head">
-          <p class="eyebrow" data-reveal data-i18n="journey.eyebrow">02 · Experience</p>
-          <h2 data-reveal><span data-i18n="journey.h1">From industrial engineering</span> <em data-i18n="journey.h2">to mobile development.</em></h2>
-          <div class="morph" data-reveal aria-hidden="true">
-            <svg viewBox="0 0 320 150">
-              <g class="gear"><circle cx="52" cy="70" r="26"/><circle cx="52" cy="70" r="9"/><path d="M52 32v10M52 98v10M14 70h10M80 70h10M25 43l7 7M72 90l7 7M25 97l7-7M72 50l7-7"/></g>
-              <path class="trail" d="M98 70C150 12 196 128 246 70"/>
-              <g class="phone"><rect x="256" y="28" width="50" height="84" rx="11"/><path d="M273 101h16"/><rect class="screen" x="265" y="42" width="32" height="20" rx="4"/><path d="M265 72h32M265 82h22"/></g>
-            </svg>
-            <div class="morph-labels"><span data-i18n="journey.from">ERP &amp; KPIs</span><span data-i18n="journey.to">iOS &amp; web</span></div>
-          </div>
+    <section id="web" class="area">
+      <div class="iso-bg web-floor" aria-hidden="true"><div class="iso-plane"><svg viewBox="0 0 2000 1600"><defs><pattern id="g3" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#36425C" stroke-opacity=".55"/></pattern></defs><rect width="2000" height="1600" fill="url(#g3)"/></svg></div></div>
+      <div class="iso-bg dom-bg" aria-hidden="true"><div class="dom-stack"><div class="dom-box" style="left:0px;top:0px;width:600px;height:860px;--l:0"><span>&lt;body&gt;</span></div><div class="dom-box" style="left:30px;top:30px;width:540px;height:90px;--l:1"><span>&lt;header&gt;</span></div><div class="dom-box m" style="left:360px;top:55px;width:50px;height:40px;--l:2"><span></span></div><div class="dom-box" style="left:420px;top:55px;width:50px;height:40px;--l:2"><span></span></div><div class="dom-box" style="left:480px;top:55px;width:60px;height:40px;--l:2"><span>&lt;nav&gt;</span></div><div class="dom-box" style="left:30px;top:150px;width:540px;height:560px;--l:1"><span>&lt;main&gt;</span></div><div class="dom-box" style="left:60px;top:180px;width:480px;height:190px;--l:2"><span>&lt;section&gt;</span></div><div class="dom-box" style="left:90px;top:210px;width:300px;height:40px;--l:3"><span>&lt;h1&gt;</span></div><div class="dom-box" style="left:90px;top:270px;width:240px;height:18px;--l:3"><span></span></div><div class="dom-box m" style="left:90px;top:310px;width:110px;height:36px;--l:3"><span>&lt;button&gt;</span></div><div class="dom-box" style="left:60px;top:400px;width:480px;height:280px;--l:2"><span>&lt;div class=grid&gt;</span></div><div class="dom-box" style="left:80px;top:420px;width:210px;height:240px;--l:3"><span>&lt;article&gt;</span></div><div class="dom-box" style="left:310px;top:420px;width:210px;height:240px;--l:3"><span></span></div><div class="dom-box s" style="left:96px;top:436px;width:178px;height:120px;--l:4"><span>&lt;img&gt;</span></div><div class="dom-box s" style="left:326px;top:436px;width:178px;height:120px;--l:4"><span></span></div><div class="dom-box" style="left:30px;top:740px;width:540px;height:90px;--l:1"><span>&lt;footer&gt;</span></div></div></div>
+      <div class="wrap">
+        <div class="area-head">
+          <h2 data-i18n="web.h">Web</h2>
+          <ol class="roles">
+            <li>
+              <h3 data-i18n="web.kloia.t">ReactJS Developer, kloia</h3>
+              <p class="when">2022</p>
+              <p data-i18n="web.kloia.b">Built web projects with React and Redux Toolkit, with Material UI and Tailwind on the UI side.</p>
+            </li>
+            <li>
+              <h3 data-i18n="web.orsa.t">ReactJS Developer, Orsa</h3>
+              <p class="when">2022</p>
+              <p data-i18n="web.orsa.b">Built a video-conferencing web app, integrated third-party video services and rewrote legacy pages.</p>
+            </li>
+          </ol>
         </div>
-        <ol class="steps" role="list">
-          <li data-reveal><span class="year" data-i18n="journey.y1">2020</span><div><h3 data-i18n="journey.t1">Process Development Engineer · Mert Döküm</h3><p data-i18n="journey.b1">Connected performance tracking to the Uyumsoft ERP, reported KPIs to the executive board each month and ran internal audits at three sites.</p></div></li>
-          <li data-reveal><span class="year" data-i18n="journey.y2">2021</span><div><h3 data-i18n="journey.t2">Industrial Engineering · Marmara University</h3><p data-i18n="journey.b2">Bachelor's degree.</p></div></li>
-          <li data-reveal><span class="year" data-i18n="journey.y3">2022</span><div><h3 data-i18n="journey.t3">ReactJS Developer · kloia</h3><p data-i18n="journey.b3">Built web projects with React and Redux Toolkit, with Material UI and Tailwind on the UI side.</p></div></li>
-          <li data-reveal><span class="year" data-i18n="journey.y4">2022</span><div><h3 data-i18n="journey.t4">ReactJS Developer · Orsa</h3><p data-i18n="journey.b4">Built a video-conferencing web app, integrated third-party video services and rewrote legacy pages.</p></div></li>
-          <li data-reveal class="now"><span class="year" data-i18n="journey.y5">2023 · now</span><div><h3 data-i18n="journey.t5">Frontend &amp; Mobile Engineer · kloia</h3><p data-i18n="journey.b5">iPhone and iPad apps in SwiftUI and UIKit, plus frontend work on web projects.</p></div></li>
+
+        <ul class="sites">
+          <li>
+            <a href="https://www.testgenie.io" rel="noopener">
+              <span class="browser" aria-hidden="true"><span class="win3d"><span class="bar"><i></i><i></i><i></i><span class="url">testgenie.io</span></span><img src="img/testgenie.webp" alt="" loading="lazy" width="1280" height="800"></span></span>
+              <h3>TestGenie</h3>
+              <span class="kind" data-i18n="web.testgenie.b">Behavioral monitoring platform</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.topbasdemir.com.tr" rel="noopener">
+              <span class="browser" aria-hidden="true"><span class="win3d"><span class="bar"><i></i><i></i><i></i><span class="url">topbasdemir.com.tr</span></span><img src="img/topbasdemir.webp" alt="" loading="lazy" width="1280" height="800"></span></span>
+              <h3 lang="tr">Topbaş Demir Çelik</h3>
+              <span class="kind" data-i18n="web.topbasdemir.b">Freelance, steel producer</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://topbasisi.com.tr" rel="noopener">
+              <span class="browser" aria-hidden="true"><span class="win3d"><span class="bar"><i></i><i></i><i></i><span class="url">topbasisi.com.tr</span></span><img src="img/topbasisi.webp" alt="" loading="lazy" width="1280" height="800"></span></span>
+              <h3 lang="tr">Topbaş Isı</h3>
+              <span class="kind" data-i18n="web.topbasisi.b">Freelance, heating and cooling systems</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.albaltd.com.tr" rel="noopener">
+              <span class="browser" aria-hidden="true"><span class="win3d"><span class="bar"><i></i><i></i><i></i><span class="url">albaltd.com.tr</span></span><img src="img/albaltd.webp" alt="" loading="lazy" width="1280" height="800"></span></span>
+              <h3 lang="tr">Alba Demir Çelik</h3>
+              <span class="kind" data-i18n="web.albaltd.b">Freelance, steel industry and trade</span>
+            </a>
+          </li>
+        </ul>
+
+        <p class="tools"><span data-i18n="tools.label">Tools</span> TypeScript, JavaScript, Node.js, .NET Core, Entity Framework, REST</p>
+      </div>
+    </section>
+
+    <section id="background" class="area">
+      <div class="wrap area-head">
+        <h2 data-i18n="bg.h">Before software</h2>
+        <ol class="roles">
+          <li>
+            <h3 data-i18n="bg.mert.t">Process Development Engineer, Mert Döküm</h3>
+            <p class="when">2020</p>
+            <p data-i18n="bg.mert.b">Connected performance tracking to the Uyumsoft ERP, reported KPIs to the executive board each month and ran internal audits at three sites.</p>
+          </li>
+          <li>
+            <h3 data-i18n="bg.edu.t">Industrial Engineering, Marmara University</h3>
+            <p class="when">2021</p>
+            <p data-i18n="bg.edu.b">Bachelor's degree.</p>
+          </li>
         </ol>
       </div>
     </section>
 
-    <section id="tools" class="section tools">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal data-i18n="tools.eyebrow">03 · Stack</p>
-        <h2 data-reveal><span data-i18n="tools.h1">Tools I use</span> <em data-i18n="tools.h2">at work.</em></h2>
-        <div class="groups">
-          <div class="group spot" data-reveal>
-            <svg class="gi" viewBox="0 0 48 48" aria-hidden="true"><rect x="13" y="5" width="22" height="38" rx="6"/><path d="M21 37h6"/></svg>
-            <h3 data-i18n="tools.g1">Mobile</h3>
-            <ul role="list"><li>SwiftUI</li><li>UIKit</li><li>Flutter</li><li>Kotlin</li></ul>
-          </div>
-          <div class="group spot" data-reveal>
-            <svg class="gi" viewBox="0 0 48 48" aria-hidden="true"><rect x="4" y="8" width="40" height="32" rx="5"/><path d="M4 16h40"/><circle cx="10" cy="12" r="1"/><circle cx="14" cy="12" r="1"/><path d="M19 25l-4 4 4 4M29 25l4 4-4 4"/></svg>
-            <h3 data-i18n="tools.g2">Web</h3>
-            <ul role="list"><li>React</li><li>TypeScript</li><li>JavaScript</li><li>Tailwind CSS</li><li>Redux Toolkit</li><li>Material UI</li></ul>
-          </div>
-          <div class="group spot" data-reveal>
-            <svg class="gi" viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="12" rx="3"/><rect x="7" y="29" width="34" height="12" rx="3"/><path d="M24 19v10M13 13h2M13 35h2"/></svg>
-            <h3 data-i18n="tools.g3">Backend &amp; APIs</h3>
-            <ul role="list"><li>Node.js</li><li>.NET Core</li><li>Entity Framework</li><li>REST</li></ul>
+    <section id="game" class="area band">
+      <div class="iso-bg" aria-hidden="true" style="--bx:22vw;--by:20px"><div class="iso-plane"><svg viewBox="0 0 2000 1600"><defs><pattern id="g4" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#36425C" stroke-opacity=".55"/></pattern></defs><rect width="2000" height="1600" fill="url(#g4)"/><g transform="translate(1031 604)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1104 1116)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(749 524)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1248 546)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1074 1046)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(759 969)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(919 488)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(788 894)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1128 521)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(946 542)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1264 884)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(760 1029)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(826 678)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1345 1092)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1296 513)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1290 1049)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1106 500)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(926 497)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1270 586)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(847 1003)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(820 1034)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1015 1023)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1398 635)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(805 1045)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><g transform="translate(1284 1104)"><ellipse rx="17" ry="17" cy="5" fill="#8A5A1C"/><circle r="17" fill="#FFB547" fill-opacity=".85"/><circle r="10" fill="none" stroke="#8A5A1C" stroke-opacity=".7"/></g><path transform="translate(820 640)" d="M0 -16L14 0L0 16L-14 0Z" fill="#8DB8FF" fill-opacity=".7"/><path transform="translate(1380 980)" d="M0 -16L14 0L0 16L-14 0Z" fill="#72E0B8" fill-opacity=".7"/><path transform="translate(1300 560)" d="M0 -16L14 0L0 16L-14 0Z" fill="#8DB8FF" fill-opacity=".7"/></svg><i class="glint" style="left:1080px;top:520px"></i><i class="glint" style="left:760px;top:900px;animation-delay:-1.6s"></i><i class="glint" style="left:1400px;top:760px;animation-delay:-3s"></i></div></div>
+      <div class="wrap game">
+        <div>
+          <h2 data-i18n="game.h">Game</h2>
+          <p data-i18n="game.line">A mobile idle game I'm working on, built in Unity. Screenshots will come with the release.</p>
+          <p class="badge" data-i18n="game.badge">Not released yet</p>
+        </div>
+        <div class="chest" aria-hidden="true">
+          <div class="rig">
+            <div class="bx base" style="--x:0;--y:0;--w:150;--d:96;--h:62"><i class="t"></i><i class="f"><b class="band-l"></b><b class="band-r"></b></i><i class="s"></i></div>
+            <div class="bx lid" style="--x:0;--y:0;--w:150;--d:96;--h:30"><i class="t"></i><i class="f"><b class="band-l"></b><b class="band-r"></b><b class="lock"></b></i><i class="s"></i></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section work">
+    <section id="contact" class="area">
+      <div class="iso-bg ship-bg" aria-hidden="true"><div class="iso-plane"><svg viewBox="0 0 2000 1600"><defs><pattern id="g5" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#36425C" stroke-opacity=".55"/></pattern></defs><rect width="2000" height="1600" fill="url(#g5)"/></svg><div class="bx belt" style="--x:0;--y:760;--w:2000;--d:80;--h:14"><i class="t"></i><i class="f"></i><i class="s"></i></div><div class="ship" style="animation-delay:-0.0s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div><div class="ship" style="animation-delay:-3.2s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div><div class="ship" style="animation-delay:-6.4s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div><div class="ship" style="animation-delay:-9.6s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div><div class="ship" style="animation-delay:-12.8s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div><div class="ship" style="animation-delay:-16.0s"><div class="bx parcel" style="--x:0;--y:0;--w:44;--d:44;--h:30"><i class="t"></i><i class="f"></i><i class="s"></i></div></div></div></div>
       <div class="wrap">
-        <p class="eyebrow" data-reveal data-i18n="work.eyebrow">04 · Projects</p>
-        <h2 data-reveal><span data-i18n="work.h1">Apps I've worked on,</span> <em data-i18n="work.h2">all live today.</em></h2>
-        <div class="projects">
-          <a class="project spot" data-reveal href="https://apps.apple.com/tr/app/cepte-şok/id1234494259" rel="noopener"><span class="big-num" aria-hidden="true">01</span><span class="tag" data-i18n="work.cepte.tag">Retail · iOS</span><h3>Cepte Şok</h3><p data-i18n="work.cepte.b">Şok Marketler's online shopping app for iPhone.</p><span class="open" data-i18n="work.store">App Store ↗</span></a>
-          <a class="project spot" data-reveal href="https://apps.apple.com/tr/app/boost-ai/id6737204140" rel="noopener"><span class="big-num" aria-hidden="true">02</span><span class="tag" data-i18n="work.boost.tag">Education · AI · iOS</span><h3>Boost AI</h3><p data-i18n="work.boost.b">Math help for exam prep. A student uploads a question and gets the solution step by step.</p><span class="open" data-i18n="work.store">App Store ↗</span></a>
-          <a class="project spot" data-reveal href="https://apps.apple.com/tr/app/unhcr-service-advisor/id6448704153" rel="noopener"><span class="big-num" aria-hidden="true">03</span><span class="tag" data-i18n="work.unhcr.tag">Humanitarian · iOS</span><h3>UNHCR Service Advisor</h3><p data-i18n="work.unhcr.b">UNHCR's app for refugees and asylum-seekers in Turkey: rights, service locations and a chatbot.</p><span class="open" data-i18n="work.store">App Store ↗</span></a>
-          <a class="project spot" data-reveal href="https://www.testgenie.io" rel="noopener"><span class="big-num" aria-hidden="true">04</span><span class="tag" data-i18n="work.testgenie.tag">Web platform</span><h3>TestGenie</h3><p data-i18n="work.testgenie.b">Web platform. Details on the site.</p><span class="open" data-i18n="work.site">Website ↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section id="game" class="section game">
-      <div class="wrap">
-        <div class="scene" data-reveal>
-          <div class="embers" aria-hidden="true">
-            <i style="--x:58%;--d:7s;--dl:0s;--dx:-24px"></i><i style="--x:64%;--d:9s;--dl:-2s;--dx:30px;--s:3px"></i>
-            <i style="--x:70%;--d:6.5s;--dl:-4s;--dx:-10px"></i><i style="--x:76%;--d:8s;--dl:-1s;--dx:22px;--s:5px"></i>
-            <i style="--x:82%;--d:10s;--dl:-6s;--dx:-36px;--s:3px"></i><i style="--x:88%;--d:7.5s;--dl:-3s;--dx:14px"></i>
-            <i style="--x:67%;--d:11s;--dl:-8s;--dx:40px;--s:2px"></i><i style="--x:73%;--d:8.5s;--dl:-5s;--dx:-28px;--s:3px"></i>
-            <i style="--x:79%;--d:6s;--dl:-2.5s;--dx:8px;--s:2px"></i><i style="--x:52%;--d:9.5s;--dl:-7s;--dx:18px;--s:3px"></i>
-            <i style="--x:92%;--d:8s;--dl:-4.5s;--dx:-16px;--s:2px"></i><i style="--x:61%;--d:12s;--dl:-9s;--dx:-6px;--s:4px"></i>
-          </div>
-          <div class="scene-text">
-            <p class="eyebrow" data-i18n="game.eyebrow">05 · Side project</p>
-            <h2><span data-i18n="game.h1">A game</span> <em data-i18n="game.h2">I'm working on.</em></h2>
-            <h3 class="game-title">Dragon Hoard</h3>
-            <p class="game-line" data-i18n="game.line">A mobile idle game built in Unity. Screenshots will come with the release.</p>
-            <p class="badge"><span class="dot"></span><span data-i18n="game.badge">Not released yet</span></p>
-          </div>
-          <div class="gate" aria-hidden="true">
-            <div class="torch"><span class="flame"></span><span class="stick"></span></div>
-            <div class="door"><span class="door-left"></span><span class="door-right"></span><span class="glow"></span><span class="rune"></span></div>
-            <div class="torch t-right"><span class="flame"></span><span class="stick"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="wrap">
-        <p class="eyebrow" data-reveal data-i18n="contact.eyebrow">06 · Contact</p>
-        <h2 class="mega" data-reveal><span data-i18n="contact.h1">Hiring for mobile</span> <em data-i18n="contact.h2">or frontend?</em></h2>
-        <p class="lead" data-reveal data-i18n="contact.sub">I'm open to mobile, frontend and automation projects. Email is the fastest way to reach me.</p>
-        <p data-reveal><a class="mail" href="mailto:i.ataberk.kilinctekin@gmail.com">i.ataberk.kilinctekin@gmail.com</a></p>
-        <div class="seal" aria-hidden="true"><svg viewBox="0 0 200 200"><defs><path id="seal-path" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#seal-path" textLength="498">MOBILE ✦ FRONTEND ✦ AI ✦ MOBILE ✦ FRONTEND ✦ AI ✦</textPath></text></svg><span>↗</span></div>
-        <p class="social" data-reveal><a href="https://www.linkedin.com/in/ibrahim-ataberk-kılınçtekin-669699149/" rel="noopener">LinkedIn ↗</a><a href="https://github.com/AtaberkKilinctekin" rel="noopener">GitHub ↗</a></p>
+        <h2 data-i18n="contact.h">Hiring for mobile or frontend?</h2>
+        <p class="lead" data-i18n="contact.sub">I'm open to mobile, frontend and automation projects. Email is the fastest way to reach me.</p>
+        <p class="mail-row"><a class="mail" href="mailto:i.ataberk.kilinctekin@gmail.com">i.ataberk.kilinctekin<wbr>@gmail.com</a></p>
+        <p class="social"><a href="https://www.linkedin.com/in/ibrahim-ataberk-kılınçtekin-669699149/" rel="noopener">LinkedIn</a><a href="https://github.com/AtaberkKilinctekin" rel="noopener">GitHub</a></p>
       </div>
     </section>
   </main>
 
-  <footer class="footer"><p data-i18n="footer">© 2026 Ataberk Kılınçtekin · Istanbul</p></footer>
+  <footer class="footer"><p data-i18n="footer">© 2026 Ataberk Kılınçtekin, Istanbul</p></footer>
 
   <script defer src="content.js"></script>
   <script defer src="i18n.js"></script>
-  <script defer src="hero.js"></script>
-  <script defer src="network.js"></script>
-  <script defer src="fx.js"></script>
-  <script defer src="scroll.js"></script>
-  <script defer src="rain.js"></script>
+  <script defer src="scenes.js"></script>
   <script defer src="main.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </body>
 </html>

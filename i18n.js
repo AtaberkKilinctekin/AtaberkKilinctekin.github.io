@@ -9,10 +9,11 @@ function pickLang() {
 }
 
 function apply(lang) {
+  const copy = COPY[lang];
   document.documentElement.lang = lang;
-  document.title = COPY[lang]["meta.title"];
+  document.title = copy["meta.title"];
   document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const text = COPY[lang][el.dataset.i18n];
+    const text = copy[el.dataset.i18n];
     if (text) el.textContent = text;
   });
   const btn = document.getElementById("lang-toggle");
@@ -25,7 +26,11 @@ function apply(lang) {
 function initI18n() {
   let lang = pickLang();
   apply(lang);
-  document.getElementById("lang-toggle")?.addEventListener("click", () => {
+  const btn = document.getElementById("lang-toggle");
+  if (!btn) return;
+  // Hidden in the markup: without JavaScript the button would do nothing.
+  btn.hidden = false;
+  btn.addEventListener("click", () => {
     lang = lang === "tr" ? "en" : "tr";
     try { localStorage.setItem("lang", lang); } catch (_) { /* ignore */ }
     apply(lang);
